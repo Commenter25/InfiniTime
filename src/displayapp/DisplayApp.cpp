@@ -465,6 +465,7 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
       break;
     case Apps::Music:
       currentScreen = std::make_unique<Screens::Music>(this, systemTask->nimble().music());
+      ReturnApp(Apps::Clock, FullRefreshDirections::RightAnim, TouchEvents::SwipeRight);
       break;
     case Apps::Navigation:
       currentScreen = std::make_unique<Screens::Navigation>(this, systemTask->nimble().navigation());

@@ -266,9 +266,6 @@ bool Music::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
       lv_obj_set_hidden(btnVolUp, true);
       return true;
     }
-    case TouchEvents::SwipeRight: {
-      return false;
-    }
     default: {
       return false;
     }
