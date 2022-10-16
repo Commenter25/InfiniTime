@@ -231,7 +231,7 @@ void Music::UpdateLength() {
                           (totalLength % 60) % 100);
   }
 
-  if((totalLength - currentPosition) > 0) {
+  if ((totalLength - currentPosition) > 0) {
     lv_label_set_text_fmt(txtRemainingTime,
                           "-%02d:%02d",
                           ((totalLength - currentPosition) / 60) % 100,
@@ -280,7 +280,7 @@ bool Music::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
       lv_obj_set_hidden(btnNext, true);
       lv_obj_set_hidden(btnPrev, true);
 
-      lv_label_set_text_static(swipeIndicatorLabel, Symbols::swipeUpIndicator);
+      lv_label_set_text_static(swipeIndicatorLabel, Symbols::swipeDownIndicator);
       return true;
     }
     case TouchEvents::SwipeDown: {
@@ -290,7 +290,7 @@ bool Music::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
       lv_obj_set_hidden(btnVolDown, true);
       lv_obj_set_hidden(btnVolUp, true);
 
-      lv_label_set_text_static(swipeIndicatorLabel, Symbols::swipeDownIndicator);
+      lv_label_set_text_static(swipeIndicatorLabel, Symbols::swipeUpIndicator);
       return true;
     }
     default: {
