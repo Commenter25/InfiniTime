@@ -78,7 +78,7 @@ void Battery::SaadcEventHandler(nrfx_saadc_evt_t const* p_event) {
     } else {
       newPercent = std::min(GetBatteryPercentageFromVoltage(voltage), static_cast<uint8_t>(isCharging ? 99 : 100));
     }
-		
+
     // quick hack for better values
     // rescale the percentages between 35 and 100
     constexpr uint8_t realMin = 35;
