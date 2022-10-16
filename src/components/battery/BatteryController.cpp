@@ -127,4 +127,3 @@ uint8_t Battery::GetBatteryPercentageFromVoltage(uint16_t voltage) {
 
   return 0;
 }
-
