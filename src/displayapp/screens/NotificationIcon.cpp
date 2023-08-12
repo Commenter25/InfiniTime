@@ -4,7 +4,7 @@ using namespace Pinetime::Applications::Screens;
 
 const char* NotificationIcon::GetIcon(bool newNotificationAvailable) {
   if (newNotificationAvailable)
-    return Symbols::info;
+    return Symbols::notificationBell;
   else
     return "";
 }
