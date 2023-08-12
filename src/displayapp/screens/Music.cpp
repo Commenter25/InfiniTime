@@ -284,23 +284,12 @@ bool Music::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
       return true;
     }
     case TouchEvents::SwipeDown: {
-      if (lv_obj_get_hidden(btnNext)) {
-        lv_obj_set_hidden(btnNext, false);
-        lv_obj_set_hidden(btnPrev, false);
-        lv_obj_set_hidden(btnVolDown, true);
-        lv_obj_set_hidden(btnVolUp, true);
+      lv_obj_set_hidden(btnNext, false);
+      lv_obj_set_hidden(btnPrev, false);
+      lv_obj_set_hidden(btnVolDown, true);
+      lv_obj_set_hidden(btnVolUp, true);
 
-        lv_label_set_text_static(swipeIndicatorLabel, Symbols::swipeDownIndicator);
-        return true;
-      }
-      return false;
-    }
-    case TouchEvents::SwipeLeft: {
-      musicService.event(Controllers::MusicService::EVENT_MUSIC_NEXT);
-      return true;
-    }
-    case TouchEvents::SwipeRight: {
-      musicService.event(Controllers::MusicService::EVENT_MUSIC_PREV);
+      lv_label_set_text_static(swipeIndicatorLabel, Symbols::swipeDownIndicator);
       return true;
     }
     default: {
