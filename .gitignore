@@ -48,5 +48,5 @@ Testing/Temporary/
 src/nRF5_SDK_15.3.0_59ac345
 src/arm-none-eabi
 
-# clangd
-.cache/
+#temp files
+*.*~
