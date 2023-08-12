@@ -6,13 +6,11 @@ This is a personal fork, likely not meeting any standards of polish, only really
 
 ## Changes
 
-Crossed out changes are currently broken.
-
 ### Not stolen
-  * ~~Increase notif vibrate from 35ms to 300ms~~
+  * Increase notif vibrate from 35ms to 300ms
+  * Increase timer vibrate from 35ms to 1500ms
 
 ### Stolen from [mashuptwice](https://github.com/mashuptwice/InfiniTime) (deleted account and repo)
-  * ~~Increase timer vibrate from 35ms to 1500ms~~
   * Increase alarm timeout from 60s to 3m
   * Move Music to right of watch face
   * Start Music with volume buttons
