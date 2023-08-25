@@ -17,7 +17,7 @@ namespace {
 FirmwareValidation::FirmwareValidation(Pinetime::Controllers::FirmwareValidator& validator) : validator {validator} {
   labelVersion = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_fmt(labelVersion,
-                        "Version : %lu.%lu.%lu [25]\n"
+                        "Version : %lu.%lu.%lu-25\n"
                         "ShortRef : %s",
                         Version::Major(),
                         Version::Minor(),
