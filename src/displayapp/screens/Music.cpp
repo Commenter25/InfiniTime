@@ -117,7 +117,7 @@ Music::Music(Pinetime::Controllers::MusicService& music) : musicService(music) {
   lv_obj_align(txtArtist, nullptr, LV_ALIGN_IN_LEFT_MID, 12, MIDDLE_OFFSET + 1 * FONT_HEIGHT);
   lv_label_set_align(txtArtist, LV_ALIGN_IN_LEFT_MID);
   lv_obj_set_width(txtArtist, LV_HOR_RES - 12);
-  lv_label_set_text_static(txtArtist, "Artist Name");
+  lv_label_set_text_static(txtArtist, "Waiting for");
 
   txtTrack = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_long_mode(txtTrack, LV_LABEL_LONG_SROLL_CIRC);
@@ -125,7 +125,7 @@ Music::Music(Pinetime::Controllers::MusicService& music) : musicService(music) {
 
   lv_label_set_align(txtTrack, LV_ALIGN_IN_LEFT_MID);
   lv_obj_set_width(txtTrack, LV_HOR_RES - 12);
-  lv_label_set_text_static(txtTrack, "This is a very long getTrack name");
+  lv_label_set_text_static(txtTrack, "track information..");
 
   /** Init animation */
   imgDisc = lv_img_create(lv_scr_act(), nullptr);
@@ -204,6 +204,8 @@ void Music::Refresh() {
 void Music::UpdateLength() {
   if (totalLength > (99 * 60 * 60)) {
     lv_label_set_text_static(txtTrackDuration, "Inf/Inf");
+  } else if (totalLength == 0) {
+    lv_label_set_text_static(txtTrackDuration, "--:--/--:--");
   } else if (totalLength > (99 * 60)) {
     lv_label_set_text_fmt(txtTrackDuration,
                           "%02d:%02d/%02d:%02d",
