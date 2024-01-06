@@ -136,6 +136,9 @@ void SystemTask::Work() {
   settingsController.Init();
 
   displayApp.Register(this);
+  displayApp.Register(&nimbleController.weather());
+  displayApp.Register(&nimbleController.music());
+  displayApp.Register(&nimbleController.navigation());
   displayApp.Start(bootError);
 
   heartRateSensor.Init();
@@ -438,6 +441,10 @@ void SystemTask::UpdateMotion() {
          motionController.ShouldShakeWake(settingsController.GetShakeThreshold()))) {
       GoToRunning();
     }
+  }
+  if (settingsController.isWakeUpModeOn(Pinetime::Controllers::Settings::WakeUpMode::LowerWrist) && state == SystemTaskState::Running &&
+      motionController.ShouldLowerSleep()) {
+    PushMessage(Messages::GoToSleep);
   }
 }
 
