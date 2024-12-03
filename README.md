@@ -32,22 +32,33 @@ Everything below is the original README, for convenience.
 
 ## [InfiniTime](https://github.com/InfiniTimeOrg)
 
+*Fast open-source firmware for the [PineTime smartwatch](https://pine64.org/devices/pinetime/) with many features, written in modern C++.*
+
 ## New to InfiniTime?
 
 - [Getting started with InfiniTime](doc/gettingStarted/gettingStarted-1.0.md)
 - [Updating the software](doc/gettingStarted/updating-software.md)
 - [About the firmware and bootloader](doc/gettingStarted/about-software.md)
+- [Available apps](doc/gettingStarted/Applications.md)
+- [Available watch faces](/doc/gettingStarted/Watchfaces.md)
+- [PineTimeStyle Watch face](https://pine64.org/documentation/PineTime/Watchfaces/PineTimeStyle)
+  - [Weather integration](https://pine64.org/documentation/PineTime/Software/InfiniTime_weather/)
 
 ### Companion apps
 
 - [Gadgetbridge](https://gadgetbridge.org/) (Android)
-- [AmazFish](https://openrepos.net/content/piggz/amazfish/) (SailfishOS)
+- [Amazfish](https://github.com/piggz/harbour-amazfish/) ([SailfishOS](https://sailfishos-chum.github.io/apps/harbour-amazfish/), [Ubuntu Touch](https://open-store.io/app/uk.co.piggz.amazfish), [Flatpak](https://flathub.org/apps/uk.co.piggz.amazfish))
 - [Siglo](https://github.com/alexr4535/siglo) (Linux)
 - [InfiniLink](https://github.com/InfiniTimeOrg/InfiniLink) (iOS)
 - [ITD](https://gitea.elara.ws/Elara6331/itd) (Linux)
 - [WatchMate](https://github.com/azymohliad/watchmate) (Linux)
+- [InfiniTimeExplorer](https://infinitimeexplorer.netlify.app) (Web)
 
-***Note**: We removed mentions to NRFConnect as this app is closed source and recent versions do not work anymore with InfiniTime (the last version known to work is 4.24.3). If you used NRFConnect in the past, we recommend you switch to [Gadgetbridge](https://gadgetbridge.org/).*
+<br>
+
+> *InfiniTimeExplorer is only compatible with web browsers that support Web BLE. Current fully supported browsers include Chrome and Microsoft Edge.* 
+>
+> *We removed mentions to NRFConnect as this app is closed source and recent versions do not work anymore with InfiniTime (the last version known to work is 4.24.3). If you used NRFConnect in the past, we recommend you switch to [Gadgetbridge](https://gadgetbridge.org/).* 
 
 ## Development
 
@@ -64,7 +75,7 @@ Everything below is the original README, for convenience.
 
 ### Contributing
 
-- [How to contribute?](doc/contribute.md)
+- [How to contribute](CONTRIBUTING.md)
 - [Coding conventions](doc/coding-convention.md)
 
 ### Build, flash and debug
